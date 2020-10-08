@@ -1,0 +1,96 @@
+.header {
+  /* height: 120px; */
+  display: flex;
+  /* display: block; */
+  width: 100%;
+  /* flex-direction: row; */
+  align-items: center;
+  /* background-color: #131921; */
+  /* background-color: whitesmoke; */
+  background-color: white;
+  color: black;
+  /* position: sticky; */
+  /* top: -500px; */
+  /* padding-top: -500px; */
+  margin-top: 10px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  /* z-index: 100; */
+}
+
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-image-width: 500px;
+  /* margin-left: auto !important; */
+  /* margin-right: auto !important; */
+  /* filter: drop-shadow(0 0 8px black); */
+  /* filter: drop-shadow(0 0 0 8px black);               */
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+  /* background-color: lightgray; */
+}
+
+.header__searchInput {
+  height: 25px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  background-color: lightgray;
+}
+.header__searchIcon {
+  padding: 5px;
+  height: 25px !important;
+  /* background-color: #cd9042; */
+  background-color: #00308F;
+  color: white;
+  font-weight: bolder;
+  
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* color: white; */
+  color: black !important;
+
+}
+
+.header__optionLineOne {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  /* color: white; */
+  color: black;
+
+}
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.color{
+  color: black !important;
+}
