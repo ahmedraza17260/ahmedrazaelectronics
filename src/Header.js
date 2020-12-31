@@ -8,12 +8,19 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
-import LOGO from './Images/ARE-01-2.png';
-import { Divider } from '@material-ui/core';
-import { Button, ButtonGroup, Container, Dropdown, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import Samsung from './Samsung';
-
-
+import LOGO from "./Images/ARE-01-2.png";
+import { Divider } from "@material-ui/core";
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  Dropdown,
+  Nav,
+  Navbar,
+  NavDropdown,
+} from "react-bootstrap";
+import Samsung from "./Samsung";
+import Search from "./Search";
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -32,13 +39,18 @@ function Header() {
           className="navbar-brand header__logo"
           alt="logo"
           src={LOGO}
-        // src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          // src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
         />
       </Link>
-      <div className="header__search">
-        <input className="header__searchInput" type="text" />
+      <Search />
+      {/* <div className="header__search">
+        <input
+          className="header__searchInput"
+          type="text"
+          placeholder="Search"
+        />
         <SearchIcon className="header__searchIcon" />
-      </div>
+      </div> */}
       <div className="header__nav">
         <Link to={!user && "/login"}>
           <div
@@ -62,34 +74,37 @@ function Header() {
         </Link>
         <div className="header__option" type="text">
           <Dropdown as={ButtonGroup}>
-            <span className="header__optionLineTwo" variant="none"><span className='header__optionLineOne'> Mobile</span>  <br />Phones</span>
+            <span className="header__optionLineTwo" variant="none">
+              <span className="header__optionLineOne"> Mobile</span> <br />
+              Phones
+            </span>
 
             <Dropdown.Toggle split variant="none" id="dropdown-split-basic" />
 
             <Dropdown.Menu>
-              <Link to='/samsung'>
+              <Link to="/samsung">
                 <NavDropdown.Item href="samsung">Samsung</NavDropdown.Item>
               </Link>
-              <Link to='/vivo'>
+              <Link to="/vivo">
                 <NavDropdown.Item href="vivo">Vivo</NavDropdown.Item>
               </Link>
-              <Link to='/realme'>
+              <Link to="/realme">
                 <NavDropdown.Item href="realme">Realme</NavDropdown.Item>
               </Link>
-              <Link to='/oppo'>
+              <Link to="/oppo">
                 <NavDropdown.Item href="oppo">Oppo</NavDropdown.Item>
               </Link>
-              <Link to='/infinix'>
+              <Link to="/infinix">
                 <NavDropdown.Item href="infinix">Infinix</NavDropdown.Item>
               </Link>
-              <Link to='/huawei'>
+              <Link to="/huawei">
                 <NavDropdown.Item href="huawei">Huawei</NavDropdown.Item>
               </Link>
             </Dropdown.Menu>
           </Dropdown>
         </div>
 
-        <Link to='/contactus'>
+        <Link to="/contactus">
           <div className="header__option" type="text">
             <span className="header__optionLineOne"> Contact </span>
             <span className="header__optionLineTwo"> Us </span>
@@ -111,21 +126,27 @@ function Header() {
 
 export default Header;
 
-
-{/* <nav className="navbar navbar-expand-lg navbar-light container-fluid " > */ }
-{/* <Link to="/">
+{
+  /* <nav className="navbar navbar-expand-lg navbar-light container-fluid " > */
+}
+{
+  /* <Link to="/">
           <img
             className="navbar-brand header__logo"
             alt="logo"
             src={LOGO}
           // src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
           />
-        </Link> */}
-{/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        </Link> */
+}
+{
+  /* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
-        </button> */}
-{/* <div ClassName="collapse navbar-collapse" id="navbarText">
+        </button> */
+}
+{
+  /* <div ClassName="collapse navbar-collapse" id="navbarText">
           <ul ClassName="navbar-nav mr-auto">
           </ul>
           <span ClassName="navbar-text mr-3 ">
@@ -198,5 +219,8 @@ export default Header;
             </ul>
 
           </span>
-        </div> */}
-{/* </nav> */ }
+        </div> */
+}
+{
+  /* </nav> */
+}

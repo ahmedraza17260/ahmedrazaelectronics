@@ -26,43 +26,44 @@ function Product({ id, title, image, price, rating }) {
   };
 
   return (
-      <div className=" product ">
-        <Card className='' style={{}}>
-          <Card.Img className='img' variant="top" src={image} />
-          <Card.Body>
-            <div className="cardStyle">
-              <Card.Text className="product__info">
-                <div>
-                  {title}
-                </div>
-                <div className="product__price">
-                  <small>$</small>
-                  <strong >{price}</strong>
-                </div>
-              </Card.Text>
-              <Card.Text>
-                <div className="product__rating">
-                  {Array(rating)
-                    .fill()
-                    .map((_, i) => (
-                      <span key={i} role="img" aria-label="star">
-                        ⭐
-                      </span>
-                    ))}
-                </div>
-              </Card.Text>
-            </div>
-            <button className='btn-basket' onClick={addToBasket}>Add To Basket</button>
-          </Card.Body>
-        </Card>
-      </div>
+    <div className=" product ">
+      <Card className="" style={{}}>
+        <Card.Img className="img" variant="top" src={image} />
+        <Card.Body>
+          <div className="cardStyle">
+            <Card.Text className="product__info">
+              <div>{title}</div>
+              <div className="product__price">
+                <small>RS</small>
+                {/* <small>$</small> */}
+                <strong>{price}</strong>
+              </div>
+            </Card.Text>
+            <Card.Text>
+              <div className="product__rating">
+                {Array(rating)
+                  .fill()
+                  .map((_, i) => (
+                    <span key={i} role="img" aria-label="star">
+                      ⭐
+                    </span>
+                  ))}
+              </div>
+            </Card.Text>
+          </div>
+          <button className="btn-basket" onClick={addToBasket}>
+            Add To Basket
+          </button>
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 
 export default Product;
 
-
-{/* <div className="product__info">
+{
+  /* <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
           <small>$</small>
@@ -79,4 +80,5 @@ export default Product;
         </div>
       </div>
       <img src={image} alt="product_image" />
-      <button onClick={addToBasket}>Add To Basket</button> */}
+      <button onClick={addToBasket}>Add To Basket</button> */
+}

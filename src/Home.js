@@ -9,16 +9,14 @@ import Product from "./Product";
 import Carousel from "react-material-ui-carousel";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
-import homePage1 from './Images/4.jpg';
-import homePage2 from './Images/5.jpg';
-import homePage3 from './Images/6.jpg';
+import homePage1 from "./Images/4.jpg";
+import homePage2 from "./Images/5.jpg";
+import homePage3 from "./Images/6.jpg";
 import nextId from "react-id-generator";
 import { Divider } from "@material-ui/core";
-import { useMediaQuery } from 'react-responsive'
-
+import { useMediaQuery } from "react-responsive";
 
 function Home() {
-
   // var ID = function () {
   //   // Math.random should be unique because of its seeding algorithm.
   //   // Convert it to base 36 (numbers + letters), and grab the first 9 characters
@@ -41,7 +39,7 @@ function Home() {
   return (
     <div className=" home ">
       <div className="home__container  ">
-        <div className='carousel slide'>
+        <div className="carousel slide">
           <Carousel className="" autoPlay autoPlayInterval="3000">
             <img
               className="home__image"
@@ -62,13 +60,17 @@ function Home() {
               alt="home page 3"
             />
           </Carousel>
-          <h2 className='heading'>Leatest Mobile Phones</h2>
+          <h2 className="heading">Latest Mobile Phones</h2>
         </div>
 
-        <div style={{marginTop:"20px", margin:"10px"}} className="container-fluid ">
-          <div className="row " >
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
-              <Product className='card'
+        <div
+          style={{ marginTop: "20px", margin: "10px" }}
+          className="container-fluid "
+        >
+          <div className="row ">
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
+              <Product
+                className="card"
                 id={nextId()}
                 title="VIVO V19"
                 price={29.99}
@@ -78,7 +80,7 @@ function Home() {
               />
             </div>
 
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
               <Product
                 id={nextId()}
                 title="GALAXY S20 PLUS"
@@ -87,7 +89,7 @@ function Home() {
                 rating={5}
               />
             </div>
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
               <Product
                 id={nextId()}
                 title="GALAXY Z FLIP"
@@ -96,8 +98,7 @@ function Home() {
                 rating={3}
               />
             </div>
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
-
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
               <Product
                 id={nextId()}
                 title="REALME 6 PRO"
@@ -106,8 +107,7 @@ function Home() {
                 rating={5}
               />
             </div>
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
-
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
               <Product
                 id={nextId()}
                 title="GALAXY S20 ULTRA"
@@ -117,8 +117,7 @@ function Home() {
               />
             </div>
 
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
-
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
               <Product
                 id={nextId()}
                 title="REALME 5 PRO"
@@ -128,8 +127,7 @@ function Home() {
               />
             </div>
 
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
-
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
               <Product
                 id={nextId()}
                 title="REALME 6"
@@ -139,8 +137,7 @@ function Home() {
               />
             </div>
 
-            <div className=' home__row col-lg-3 col-sm-12 col-md-6 '>
-
+            <div className=" home__row col-lg-3 col-sm-12 col-md-6 ">
               <Product
                 id={nextId()}
                 title="NOTE 7"
@@ -149,7 +146,6 @@ function Home() {
                 rating={5}
               />
             </div>
-
 
             {/* <Product
                 id={nextId()}
@@ -258,7 +254,6 @@ function Home() {
           />
 
         </div> */}
-
 
         {/* </Fade> */}
 
